@@ -32,9 +32,9 @@ def generate_table_data(table: TableService, nb_events: int):
     print(output)
 
     # Write inside a file
-    with open("results/res_events_" + table.get_tablename() + ".sql", "w") as f:
+    with open("results/res_" + table.get_tablename() + ".sql", "w") as f:
         f.write(output)
-    print("Result saved in file: 'results/res_events_" + table.get_tablename() + ".sql'.")
+    print("Result saved in file: 'results/res_" + table.get_tablename() + ".sql'.")
 
 
 if __name__ == '__main__':
