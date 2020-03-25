@@ -4,6 +4,8 @@ Ce script permet de générer des données fictives pour peupler une base de don
 Les données présentes dans cette base de données sont ensuite visualisé à l'aide du logiciel Grafana.
 
 #Requirement
+
+### Python Version 3
 Python version 3. Testé avec python 3.7.3
 
 ```bash
@@ -11,10 +13,15 @@ python --version
 python3 --version 
 ```
 
+
 #Usage:
 
 ```bash
 cd DataGenerationScript/.
 
-python3 main.py
+python3 main.py <nb_device_data> <nb_events_data>
+
+Example:
+  python3 main.py 20 200    #Génère 20 équipements aléatoire et 200 événements aléatoire de détection caméra.
+
 ```
