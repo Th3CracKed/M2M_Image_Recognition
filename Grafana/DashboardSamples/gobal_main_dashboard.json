@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 4,
+  "id": 2,
   "links": [],
   "panels": [
     {
@@ -26,7 +26,7 @@
         "x": 0,
         "y": 0
       },
-      "id": 4,
+      "id": 10,
       "options": {
         "fieldOptions": {
           "calcs": [
@@ -196,6 +196,281 @@
       "type": "gauge"
     },
     {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "hiddenSeries": false,
+      "id": 14,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  time AS \"time\",\n  accuracy\nFROM events\nWHERE\n  $__timeFilter(time) AND\n  entity = 'chamois'\nORDER BY time",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "accuracy"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "events",
+          "timeColumn": "time",
+          "timeColumnType": "timestamp",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            },
+            {
+              "datatype": "varchar",
+              "name": "",
+              "params": [
+                "entity",
+                "=",
+                "'chamois'"
+              ],
+              "type": "expression"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  time AS \"time\",\n  accuracy\nFROM events\nWHERE\n  $__timeFilter(time) AND\n  entity = 'homme'\nORDER BY time",
+          "refId": "B",
+          "select": [
+            [
+              {
+                "params": [
+                  "accuracy"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "events",
+          "timeColumn": "time",
+          "timeColumnType": "timestamp",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            },
+            {
+              "datatype": "varchar",
+              "name": "",
+              "params": [
+                "entity",
+                "=",
+                "'homme'"
+              ],
+              "type": "expression"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  time AS \"time\",\n  accuracy\nFROM events\nWHERE\n  $__timeFilter(time) AND\n  entity = 'loup'\nORDER BY time",
+          "refId": "C",
+          "select": [
+            [
+              {
+                "params": [
+                  "accuracy"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "events",
+          "timeColumn": "time",
+          "timeColumnType": "timestamp",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            },
+            {
+              "datatype": "varchar",
+              "name": "",
+              "params": [
+                "entity",
+                "=",
+                "'loup'"
+              ],
+              "type": "expression"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Accuracy per day",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "circleMaxSize": "13",
+      "circleMinSize": "2",
+      "colors": [
+        "#F2495C",
+        "#C8F2C2",
+        "#1F60C4",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "datasource": "MySQL",
+      "decimals": 0,
+      "esMetric": "Count",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 8
+      },
+      "hideEmpty": false,
+      "hideZero": false,
+      "id": 4,
+      "initialZoom": 1,
+      "locationData": "table",
+      "mapCenter": "(0°, 0°)",
+      "mapCenterLatitude": 0,
+      "mapCenterLongitude": 0,
+      "maxDataPoints": 1,
+      "mouseWheelZoom": true,
+      "showLegend": true,
+      "stickyLabels": false,
+      "tableQueryOptions": {
+        "geohashField": "geohash",
+        "labelField": "name",
+        "latitudeField": "latitude",
+        "longitudeField": "longitude",
+        "metricField": "metric",
+        "queryType": "coordinates"
+      },
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  UNIX_TIMESTAMP(`time`) as time_sec,\n  `devEUI` as name,\n  `batteryLevel` as metric,\n  `latitude` as latitude,\n  `longitude` as longitude\nFROM devices\nWHERE $__timeFilter(`time`)\nORDER BY `time` ASC",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "id"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "devices",
+          "timeColumn": "time",
+          "timeColumnType": "timestamp",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "thresholds": "30,50,80",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Test copy",
+      "type": "grafana-worldmap-panel",
+      "unitPlural": "",
+      "unitSingle": "",
+      "unitSingular": "",
+      "valueName": "total"
+    },
+    {
       "cards": {
         "cardPadding": null,
         "cardRound": null
@@ -214,12 +489,12 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 0
+        "y": 9
       },
       "heatmap": {},
       "hideZeroBuckets": false,
       "highlightCards": true,
-      "id": 6,
+      "id": 12,
       "legend": {
         "show": false
       },
@@ -428,20 +703,20 @@
     },
     {
       "aliasColors": {},
-      "bars": false,
+      "bars": true,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "MySQL",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 8
+        "y": 16
       },
       "hiddenSeries": false,
-      "id": 2,
+      "id": 6,
       "legend": {
         "avg": false,
         "current": false,
@@ -451,7 +726,7 @@
         "total": false,
         "values": false
       },
-      "lines": true,
+      "lines": false,
       "linewidth": 1,
       "nullPointMode": "null",
       "options": {
@@ -468,18 +743,39 @@
       "targets": [
         {
           "format": "time_series",
-          "group": [],
+          "group": [
+            {
+              "params": [
+                "$__interval",
+                "none"
+              ],
+              "type": "time"
+            }
+          ],
+          "hide": false,
           "metricColumn": "none",
           "rawQuery": false,
-          "rawSql": "SELECT\n  time AS \"time\",\n  accuracy\nFROM events\nWHERE\n  $__timeFilter(time) AND\n  entity = 'chamois'\nORDER BY time",
+          "rawSql": "SELECT\n  $__timeGroupAlias(time,$__interval),\n  count(id) AS \"id\"\nFROM events\nWHERE\n  $__timeFilter(time) AND\n  entity = 'chamois'\nGROUP BY 1\nORDER BY $__timeGroup(time,$__interval)",
           "refId": "A",
           "select": [
             [
               {
                 "params": [
-                  "accuracy"
+                  "id"
                 ],
                 "type": "column"
+              },
+              {
+                "params": [
+                  "count"
+                ],
+                "type": "aggregate"
+              },
+              {
+                "params": [
+                  "id"
+                ],
+                "type": "alias"
               }
             ]
           ],
@@ -503,89 +799,13 @@
               "type": "expression"
             }
           ]
-        },
-        {
-          "format": "time_series",
-          "group": [],
-          "metricColumn": "none",
-          "rawQuery": false,
-          "rawSql": "SELECT\n  time AS \"time\",\n  accuracy\nFROM events\nWHERE\n  $__timeFilter(time) AND\n  entity = 'homme'\nORDER BY time",
-          "refId": "B",
-          "select": [
-            [
-              {
-                "params": [
-                  "accuracy"
-                ],
-                "type": "column"
-              }
-            ]
-          ],
-          "table": "events",
-          "timeColumn": "time",
-          "timeColumnType": "timestamp",
-          "where": [
-            {
-              "name": "$__timeFilter",
-              "params": [],
-              "type": "macro"
-            },
-            {
-              "datatype": "varchar",
-              "name": "",
-              "params": [
-                "entity",
-                "=",
-                "'homme'"
-              ],
-              "type": "expression"
-            }
-          ]
-        },
-        {
-          "format": "time_series",
-          "group": [],
-          "metricColumn": "none",
-          "rawQuery": false,
-          "rawSql": "SELECT\n  time AS \"time\",\n  accuracy\nFROM events\nWHERE\n  $__timeFilter(time) AND\n  entity = 'loup'\nORDER BY time",
-          "refId": "C",
-          "select": [
-            [
-              {
-                "params": [
-                  "accuracy"
-                ],
-                "type": "column"
-              }
-            ]
-          ],
-          "table": "events",
-          "timeColumn": "time",
-          "timeColumnType": "timestamp",
-          "where": [
-            {
-              "name": "$__timeFilter",
-              "params": [],
-              "type": "macro"
-            },
-            {
-              "datatype": "varchar",
-              "name": "",
-              "params": [
-                "entity",
-                "=",
-                "'loup'"
-              ],
-              "type": "expression"
-            }
-          ]
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Accuracy per day",
+      "title": "Number of chamois per day",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -623,44 +843,44 @@
       }
     },
     {
-      "datasource": null,
-      "description": "",
+      "aliasColors": {},
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "MySQL",
+      "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
-        "h": 8,
+        "h": 9,
         "w": 12,
         "x": 12,
-        "y": 8
+        "y": 17
       },
+      "hiddenSeries": false,
       "id": 8,
-      "options": {
-        "fieldOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "defaults": {
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": [],
-          "values": false
-        },
-        "orientation": "auto",
-        "showThresholdLabels": false,
-        "showThresholdMarkers": true
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
       },
-      "pluginVersion": "6.7.1",
+      "lines": false,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
       "targets": [
         {
           "format": "time_series",
@@ -673,9 +893,10 @@
               "type": "time"
             }
           ],
+          "hide": false,
           "metricColumn": "none",
           "rawQuery": false,
-          "rawSql": "SELECT\n  $__timeGroupAlias(time,$__interval),\n  sum(id) AS \"id\"\nFROM events\nWHERE\n  $__timeFilter(time) AND\n  entity = 'homme'\nGROUP BY 1\nORDER BY $__timeGroup(time,$__interval)",
+          "rawSql": "SELECT\n  $__timeGroupAlias(time,$__interval),\n  count(id) AS \"id\"\nFROM events\nWHERE\n  $__timeFilter(time) AND\n  entity = 'homme'\nGROUP BY 1\nORDER BY $__timeGroup(time,$__interval)",
           "refId": "A",
           "select": [
             [
@@ -687,7 +908,7 @@
               },
               {
                 "params": [
-                  "sum"
+                  "count"
                 ],
                 "type": "aggregate"
               },
@@ -721,10 +942,328 @@
           ]
         }
       ],
+      "thresholds": [],
       "timeFrom": null,
+      "timeRegions": [],
       "timeShift": null,
-      "title": "Count Homme",
-      "type": "gauge"
+      "title": "Number of humain per day",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "MySQL",
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 25
+      },
+      "hiddenSeries": false,
+      "id": 16,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": false,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [
+            {
+              "params": [
+                "$__interval",
+                "none"
+              ],
+              "type": "time"
+            }
+          ],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  $__timeGroupAlias(time,$__interval),\n  count(id) AS \"id\"\nFROM events\nWHERE\n  $__timeFilter(time) AND\n  entity = 'loup'\nGROUP BY 1\nORDER BY $__timeGroup(time,$__interval)",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "id"
+                ],
+                "type": "column"
+              },
+              {
+                "params": [
+                  "count"
+                ],
+                "type": "aggregate"
+              },
+              {
+                "params": [
+                  "id"
+                ],
+                "type": "alias"
+              }
+            ]
+          ],
+          "table": "events",
+          "timeColumn": "time",
+          "timeColumnType": "timestamp",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            },
+            {
+              "datatype": "varchar",
+              "name": "",
+              "params": [
+                "entity",
+                "=",
+                "'loup'"
+              ],
+              "type": "expression"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Number of wolf per day",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "MySQL",
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 26
+      },
+      "hiddenSeries": false,
+      "id": 17,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": false,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [
+            {
+              "params": [
+                "$__interval",
+                "none"
+              ],
+              "type": "time"
+            }
+          ],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  $__timeGroupAlias(time,$__interval),\n  count(id) AS \"id\"\nFROM events\nWHERE\n  $__timeFilter(time) AND\n  entity = 'lièvre'\nGROUP BY 1\nORDER BY $__timeGroup(time,$__interval)",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "id"
+                ],
+                "type": "column"
+              },
+              {
+                "params": [
+                  "count"
+                ],
+                "type": "aggregate"
+              },
+              {
+                "params": [
+                  "id"
+                ],
+                "type": "alias"
+              }
+            ]
+          ],
+          "table": "events",
+          "timeColumn": "time",
+          "timeColumnType": "timestamp",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            },
+            {
+              "datatype": "varchar",
+              "name": "",
+              "params": [
+                "entity",
+                "=",
+                "'lièvre'"
+              ],
+              "type": "expression"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Number of rabbits per day",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     }
   ],
   "schemaVersion": 22,
@@ -734,7 +1273,7 @@
     "list": []
   },
   "time": {
-    "from": "now-7d",
+    "from": "now-1y",
     "to": "now"
   },
   "timepicker": {
@@ -752,10 +1291,10 @@
     ]
   },
   "timezone": "",
-  "title": "New dashboard Copy",
-  "uid": "_cVayN9Zk",
+  "title": "Main Dashboard",
+  "uid": "KAi1YvrZk",
   "variables": {
     "list": []
   },
-  "version": 2
+  "version": 16
 }
