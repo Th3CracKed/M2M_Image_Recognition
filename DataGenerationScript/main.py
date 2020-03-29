@@ -19,8 +19,8 @@ def main(dev_data: int, event_data: int):
     my_events = ['homme', 'bouquetin', 'chamois', 'loup', 'loup', 'marmotte', 'Chouette', 'lièvre', 'lièvre']
     deviceSrv = DeviceServices(my_events)
 
-    deviceSQL = DeviceSql(timeSrv, deviceSrv, 'device')
-    eventSQL = EventSql(timeSrv, deviceSrv, 'event')
+    deviceSQL = DeviceSql(timeSrv, deviceSrv, 'devices')
+    eventSQL = EventSql(timeSrv, deviceSrv, 'events')
 
     generate_table_data(deviceSQL, dev_data)
     generate_table_data(eventSQL, event_data)
@@ -34,7 +34,7 @@ def generate_table_data(table: TableService, nb_events: int):
     output = ""
 
     for i in range(0, nb_events):
-        output += table.get_values()
+        output += 'INSERT INTO ' + table.get_tablename() + ' VALUES (' + table.get_values() + ');'
         output += "\n"
 
     print(output)
