@@ -30,6 +30,6 @@ That using the IDE is working only if the current firmware support that, which i
 **Quick guide for using Terminal to upload the code:**
 - `sudo minicom`
 -   Copy the code
--   Type in `Ctrl+E`
+-   Type in `Ctrl+E` to allow multiLine
 -   Paste code
 -   Type in `Ctrl+D` to execute code
