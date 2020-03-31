@@ -1,3 +1,6 @@
+# Video installation instructions:
+https://drive.google.com/file/d/10iKy3b76b-TXIiM07xIRQXwXXXEDGK18/view
+
 # M2M project using ML For Image Recognition
 
 Execute `ls /dev/ttyUSB*` to check if the device is found
