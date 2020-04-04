@@ -1,7 +1,7 @@
 # Grafana / Mysql
 Étapes pour installer Grafana et visualiser les données présentent dans une base de données d'événements de détection d'animaux et d'humain.
 
-Démo Vidéo de démonstration installation: [Voir video](https://drive.google.com/open?id=1to3Lmrpa5p6n_ldvlMCuhmxqRK6jarPy)
+Démo Vidéo de démonstration installation: [https://drive.google.com/open?id=1to3Lmrpa5p6n_ldvlMCuhmxqRK6jarPy](https://drive.google.com/open?id=1to3Lmrpa5p6n_ldvlMCuhmxqRK6jarPy) 
 
 ### Environnement d'execution:
 Testé sur Ubuntu 19.04, 
