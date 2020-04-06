@@ -4,6 +4,7 @@ Cours: M2M Mini projet *Sipeed MAix BiT k210*
 
 DRIOWYA Abdelghafour
 
+## Privacy & Security
 
 Le projet consiste à fournir une solution à distance qui permet de compter les animaux à l'aide d'un appareil connecté Maix Bit. 
 
