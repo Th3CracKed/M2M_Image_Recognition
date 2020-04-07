@@ -44,5 +44,4 @@ Les études peuvent servir à **promouvoir le développement durable aux niveaux
 
 # Impact environnemental :
 Vu le coût énergétique faible de l'appareil utilisé et les avantages qu'il peut apporter niveau économique et social.  
-
-L’impact de cet objet connecté est faible. Même que l’impact est principalement positif car il aide à la préservation et la surveillance de l’environnement.
+L’impact est principalement positif car il aide à la préservation et la surveillance de l’environnement.
