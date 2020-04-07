@@ -1,4 +1,4 @@
-#RGPD
+# RGPD
 
 ## Authentifier les utilisateurs
 
@@ -19,10 +19,10 @@ Supprimez les permissions d’accès obsolètes :
 ## Tracer les accès et gérer les incidents
 
 Prévoyez un système de journalisation :
-> Chaque modifications sur les dashboards sont sauvegardée et offre la possibilité d’ajouter des commentaires en lien avec raison de la modification.
+> Chaque modification sur les dashboards sont sauvegardée. Et offre la possibilité d’ajouter des commentaires en lien avec raison de la modification.
 
 Prévoyez les procédures pour les notifications de violation de données à caractère personnel:
-> Nous ne traitons pas de données personnelles.
+> Nous ne traitons pas de données personnelles. (Si nous restons dans le domaine de surveillance des passages animaux/personnes). 
 
 ## Sécuriser les postes de travail
 
@@ -37,7 +37,7 @@ Prévoyez des moyens de chiffrement des équipements mobiles :
 ## Protéger le réseau informatique interne
 
 Limitez les flux réseau au strict nécessaire:
-> Data minimisation. Dans notre projet nous sommes partie du principe que notre appareil iot sauvegarde localement les événements de la journée dans une mémoire en local pour par la suite les envoyées en une seule grande requête et éviter de s'obstruer le réseau avec de multiples petites requêtes par jours. 
+> Data minimisation. Dans notre projet nous sommes partie du principe que notre appareil iot sauvegarde localement les événements de la journée dans une mémoire en local pour par la suite les envoyer en une seule grande requête et éviter d'obstruer le réseau avec de multiples petites requêtes par jour. 
 
 ## Sécuriser les serveurs
 
@@ -45,7 +45,7 @@ Limitez l’accès aux outils et interfaces d’administration aux seules person
 > Avec une authentification des utilisateurs par identifiant mot de passe.
 
 Installez sans délai les mises à jour critiques :
-> Uniquement sur les logiciels de consultation des données (PC). Pas sur les équipements à distance. En effet nous avons déduis qu’il était diffcile d’envisager des mises à jours OTA avec un réseau LoRaWAN.
+> Uniquement sur les logiciels de consultation des données (PC). Pas sur les équipements à distance. En effet nous avons déduit qu’il était difficile d’envisager des mises à jour OTA avec un réseau comme LoRaWan.
 
 ## Sécuriser les sites web
 
@@ -64,8 +64,8 @@ Assurez-vous qu'il s'agit du bon destinataire :
 ## Encadrer les développements informatiques
 
 Proposez des paramètres respectueux de la vie privée aux utilisateurs finaux :
-> Les données de notre projet sont anonymes, car il n’y a pas de possibilité de faire une corrélation entre les données capté et une personne physique.
+> Les données de notre projet sont anonymes, car il n’y a pas de possibilité de faire une corrélation entre les données captées et celle d'une personne physique.
 
 Testez sur des données fictives ou anonymisées :
-> Oui avec notre script python générateur de données, nous pouvons ajouter des appareils aléatoirement avec des évenements fictifs de détection d’image.
+> Oui avec notre script python générateur de données, nous pouvons ajouter des appareils aléatoirement avec des événements fictifs de détection d’image.
 
